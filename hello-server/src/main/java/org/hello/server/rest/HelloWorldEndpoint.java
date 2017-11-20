@@ -14,7 +14,7 @@ public class HelloWorldEndpoint {
 	@GET
 	@Produces("text/plain")
 	public Response doGet() {
-		return Response.ok("Hello from WildFly Swarm! The time is: " + getTime()).build();
+		return Response.ok("Hi there! The time is: " + getTime()).build();
 	}
 
 
