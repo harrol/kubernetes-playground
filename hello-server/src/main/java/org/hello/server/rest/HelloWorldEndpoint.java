@@ -20,7 +20,7 @@ public class HelloWorldEndpoint {
 
 	private String getTime() {
 		return ClientBuilder.newClient()
-				.target("http://time-server:8080/time")
+				.target("http://time-service:8080/time")
 				.request()
 				.get(String.class);
 	}
