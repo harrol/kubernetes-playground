@@ -1,0 +1,19 @@
+apiVersion: apps/v1beta2
+kind: Deployment
+metadata:
+  name: time-server-deployment
+spec:
+  selector:
+    matchLabels:
+      app: time-server
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: time-server
+    spec:
+      containers:
+      - name: time-server
+        image: time-server:v1
+        ports:
+        - containerPort: 8080
