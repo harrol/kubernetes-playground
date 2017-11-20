@@ -1,0 +1,29 @@
+= Kubernetes
+
+== Start Minikube
+
+    minikube start --vm-driver=xhyve
+
+
+== Use local Docker
+
+    eval $(minikube docker-env)
+
+
+== Open Kubernetes dashboard
+
+   minikube dashboard
+
+== (Un)deploy Kubernetes deployment/service
+
+    kubectl create/delete -f file.yaml
+
+= Docker
+
+== Build docker image
+
+   docker build --tag=name:version .
+
+== Run Docker image
+
+   docker run -p 8080:8080 image
